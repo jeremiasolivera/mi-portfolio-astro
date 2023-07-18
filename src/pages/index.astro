@@ -20,8 +20,8 @@ import gitSVG from '../public/github.svg'
 		  </section>
 		</header>
 	  
-		<main class='grid grid-cols-2 gap-5 w-[1100px] mx-auto'>
-		  <aside class=''>
+		<main class='grid items-start grid-cols-2 gap-5 w-[1100px] mx-auto'>
+		  <aside class="sticky top-[80px] ">
 			  <header>
 				<h2 class='text-5xl text-slate-200 font-bold mb-2'>Jeremias Olivera</h2>
 				<h5 class='text-[1.2rem] text-slate-300 font-semibold mb-3'>Lead Engineer at Upstatement</h5>
@@ -29,14 +29,23 @@ import gitSVG from '../public/github.svg'
 			  </header>
 			  <main class='mt-20 text-slate-200 font-semibold'>
 				<ul >
-				  <li class='group flex gap-3 items-center mb-3 '><div class='group-hover:w-[60px] group-hover:bg-white w-[20px] h-[1.2px] bg-slate-500 '></div>
-					<h6 class='group-hover:text-white text-slate-500 text-[13px] tracking-widest'>ABOUT</h6></li>
-				  <li class='flex gap-3 items-center mb-3 group'>
-					<div class='w-[20px] h-[1.1px] bg-slate-500 group-hover:bg-white group-hover:w-[60px] '></div>
-					<h6 class='text-[13px] tracking-widest group-hover:text-white text-slate-500' >PORTFOLIO</h6>
-				  </li>
-				  <li class='flex gap-3 items-center mb-3 group'><div class='group-hover:bg-white group-hover:w-[60px] w-[20px] h-[1.2px] bg-slate-500 '></div>
-					<h6 class='text-slate-500 text-[13px] tracking-widest group-hover:text-white'>EXPERIENCE</h6></li>
+					<a href="#">
+					  <li class='group flex gap-3 items-center mb-4 '><div class='group-hover:w-[60px] group-hover:bg-white w-[20px] h-[1.2px] bg-slate-500 '></div>
+						<h6 class='group-hover:text-white text-slate-500 text-[13px] tracking-widest'>ABOUT</h6></li>
+						
+					</a>
+					<a href="#">
+					  <li class='flex gap-3 items-center mb-4 group'>
+						<div class='w-[20px] h-[1.1px] bg-slate-500 group-hover:bg-white group-hover:w-[60px] '></div>
+						<h6 class='text-[13px] tracking-widest group-hover:text-white text-slate-500' >PORTFOLIO</h6>
+					  </li>
+						
+					</a>
+					<a href="#">
+					  <li class='flex gap-3 items-center mb-4 group'><div class='group-hover:bg-white group-hover:w-[60px] w-[20px] h-[1.2px] bg-slate-500 '></div>
+						<h6 class='text-slate-500 text-[13px] tracking-widest group-hover:text-white'>EXPERIENCE</h6></li>
+						
+					</a>
 				</ul>
 			  </main>
 			  <footer class='flex justify-start items-center gap-7 mt-[250px]'>
@@ -56,7 +65,7 @@ import gitSVG from '../public/github.svg'
 		  </aside>
 		  <article>
 			<section class="mb-[80px]">
-				<p  class="mb-5 text-slate-400 font-[400] text-[17px]  " >
+				<p  class="mb-5 text-slate-400 font-[400] text-[17px] mt-2  " >
 					Back in 2012, I decided to try my hand at <a href="" class="text-slate-200 font-[500] hover:text-teal-300 transition-colors duration-500">In my free time I've</a>     creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I've had the privilege of building software for an <a href="#" class="text-slate-300 font-[500] hover:text-teal-300 transition-colors duration-500">advertising agency</a>. student-led design studio.
 				</p>
 				<p class="mb-5 text-slate-400 font-[400] text-[17px] ">
@@ -67,14 +76,12 @@ import gitSVG from '../public/github.svg'
 				<p class="mb-5 text-slate-400 font-[400] text-[17px] ">When <a href="#" class="text-slate-300 font-[600] hover:text-teal-300 transition-colors duration-500">In my free time I've</a> I'm not at the computer, I'm usually rock climbing, hanging out with<a href="#" class="text-slate-200 font-[500] hover:text-teal-300 transition-colors duration-500">In my free time I've</a> my wife and two cats, or running around Hyrule searching for</p>
 			</section>
 			<section>
-				<Card date={"2019 - Present"} title={"My main focus these"} subTitle={"Engenieer date"} desc={"My main focus these days is building products and leading projects for our clients at  In my free time I've  also released an that covers everything you need to know to build a web app with the Spotify API."} tags={"JavaScript"}/>
+				<Card />
 
 			</section>
 			
 		  </article>
 		</main>
-	  
-		<br /><br />
 		
 	  </div>
 </Layout>
@@ -93,4 +100,9 @@ import gitSVG from '../public/github.svg'
   box-shadow: 0 0 60px 60px rgba(28, 35, 131, 0.055);
   filter: blur(30px);
 }
+
+/*#aside-bar{
+	position: sticky;
+	top: 70px; /* Ajusta el valor según el margen deseado */
+   
 </style>
