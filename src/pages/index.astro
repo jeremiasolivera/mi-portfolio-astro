@@ -2,7 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import icon from '../public/mi-icon.png'
 import Card from '../components/Card.astro'
-import gitSVG from '../public/github.svg'
+import Proyecto from '../components/Proyecto.astro'
+import Recomendaciones from '../components/Recomendaciones.astro'
 ---
 
 <Layout title="Mi Portfolio Web">
@@ -25,25 +26,25 @@ import gitSVG from '../public/github.svg'
 			  <header>
 				<h2 class='text-5xl text-slate-200 font-bold mb-2'>Jeremias Olivera</h2>
 				<h5 class='text-[1.2rem] text-slate-300 font-semibold mb-3'>Lead Engineer at Upstatement</h5>
-				<p class='text-[1rem] text-slate-400 font-[500] w-[350px]'>I build accessible, inclusive products and digital experiences for the web.</p>
+				<p  class='text-[1rem] text-slate-400 font-[500] w-[350px]'>I build accessible, inclusive products and digital experiences for the web.</p>
 			  </header>
 			  <main class='mt-20 text-slate-200 font-semibold'>
 				<ul >
-					<a href="#">
-					  <li class='group flex gap-3 items-center mb-4 '><div class='group-hover:w-[60px] group-hover:bg-white w-[20px] h-[1.2px] bg-slate-500 '></div>
-						<h6 class='group-hover:text-white text-slate-500 text-[13px] tracking-widest'>ABOUT</h6></li>
+					<a href="#aboutEl">
+					  <li class='group flex gap-3 items-center mb-4 '><div id="about-link-div" class='group-hover:w-[60px] group-hover:bg-white w-[20px] h-[1.2px] bg-slate-500 '></div>
+						<h6  id="about-link" class='group-hover:text-white text-slate-500 text-[13px] tracking-widest'>ABOUT</h6></li>
 						
 					</a>
-					<a href="#">
+					<a href="#experienceEl">
 					  <li class='flex gap-3 items-center mb-4 group'>
-						<div class='w-[20px] h-[1.1px] bg-slate-500 group-hover:bg-white group-hover:w-[60px] '></div>
-						<h6 class='text-[13px] tracking-widest group-hover:text-white text-slate-500' >PORTFOLIO</h6>
+						<div id="experience-link-div"  class='w-[20px] h-[1.1px] bg-slate-500 group-hover:bg-white group-hover:w-[60px] '></div>
+						<h6 id="experience-link" class='text-[13px] tracking-widest group-hover:text-white text-slate-500' >EXPERIENCE</h6>
 					  </li>
 						
 					</a>
-					<a href="#">
-					  <li class='flex gap-3 items-center mb-4 group'><div class='group-hover:bg-white group-hover:w-[60px] w-[20px] h-[1.2px] bg-slate-500 '></div>
-						<h6 class='text-slate-500 text-[13px] tracking-widest group-hover:text-white'>EXPERIENCE</h6></li>
+					<a href="#recomendacionesEl">
+					  <li class='flex gap-3 items-center mb-4 group'><div id="portfolio-link-div"  class='group-hover:bg-white group-hover:w-[60px] w-[20px] h-[1.2px] bg-slate-500 '></div>
+						<h6 id="portfolio-link" class='text-slate-500 text-[13px] tracking-widest group-hover:text-white'>PORTFOLIO</h6></li>
 						
 					</a>
 				</ul>
@@ -64,27 +65,96 @@ import gitSVG from '../public/github.svg'
 			  </footer>
 		  </aside>
 		  <article>
-			<section class="mb-[80px]">
-				<p  class="mb-5 text-slate-400 font-[400] text-[17px] mt-2  " >
+			<section class="mb-[170px] about" id="aboutEl">
+				<p class="mb-5 text-slate-400 font-[400] text-[17px] mt-2  " >
 					Back in 2012, I decided to try my hand at <a href="" class="text-slate-200 font-[500] hover:text-teal-300 transition-colors duration-500">In my free time I've</a>     creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I've had the privilege of building software for an <a href="#" class="text-slate-300 font-[500] hover:text-teal-300 transition-colors duration-500">advertising agency</a>. student-led design studio.
 				</p>
-				<p class="mb-5 text-slate-400 font-[400] text-[17px] ">
+				<p  class="mb-5 text-slate-400 font-[400] text-[17px] ">
 					My main focus these days is building products and leading projects for our clients at . <a href="" class="text-slate-200 font-[500] hover:text-teal-300 transition-colors duration-500"> In my free time I've</a>  also released an that covers everything you need to know to build a web app with the Spotify API.
 				</p>
 				
 
 				<p class="mb-5 text-slate-400 font-[400] text-[17px] ">When <a href="#" class="text-slate-300 font-[600] hover:text-teal-300 transition-colors duration-500">In my free time I've</a> I'm not at the computer, I'm usually rock climbing, hanging out with<a href="#" class="text-slate-200 font-[500] hover:text-teal-300 transition-colors duration-500">In my free time I've</a> my wife and two cats, or running around Hyrule searching for</p>
 			</section>
-			<section>
+			<section id="experienceEl" class="mb-[10rem]">
+				<h3 class="my-10 text-lg font-medium text-slate-400 underline">Historia</h3>
 				<Card />
-
 			</section>
-			
+			<section  id="portfolioEl" class="mb-[10rem]">
+				<h3 class="my-10 text-lg font-medium text-slate-400 underline">Proyectos</h3>
+				<Proyecto />
+			</section>
+			<section  id="recomendacionesEl" class="mb-[10rem]">
+				<h3 class="my-10 text-lg font-medium text-slate-400 underline">Algunas Recomendaciones</h3>
+				<Recomendaciones />
+			</section>
+
+			<h4 class="my-10 font-medium text-slate-600">Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with Next.js and Tailwind CSS, deployed with Vercel. All text is set in the Inter typeface.</h4>
 		  </article>
 		</main>
 		
 	  </div>
 </Layout>
+
+<script>
+
+
+
+
+function scrollWindow(){
+	const $aboutLinkText = document.getElementById("about-link")
+	const $experienceLinkText = document.getElementById("experience-link")
+	const $portfolioLinkText = document.getElementById("portfolio-link")
+
+	const $aboutLinkDiv = document.getElementById("about-link-div")
+	const $experienceLinkDiv = document.getElementById("experience-link-div")
+	const $portfolioLinkDiv = document.getElementById("portfolio-link-div")
+
+	const $aboutEl = document.getElementById("aboutEl")
+	const $experienceEl = document.getElementById("experienceEl")
+	const $portfolioEl = document.getElementById("portfolioEl")
+	const $recomendacionesEl = document.getElementById("recomendacionesEl")
+
+	const scrollPosition = window.scrollY
+
+    if(scrollPosition >= ($aboutEl.offsetTop - 90) && scrollPosition <= ($experienceEl.offsetTop - 140)){
+        $aboutLinkText.classList.replace("text-slate-500", "text-white")
+        $aboutLinkDiv.classList.replace("bg-slate-500", "bg-white")
+        $aboutLinkDiv.classList.replace("w-[20px]", "w-[60px]")
+    }else{
+		$aboutLinkText.classList.replace("text-white", "text-slate-500")
+        $aboutLinkDiv.classList.replace("bg-white", "bg-slate-500")
+        $aboutLinkDiv.classList.replace("w-[60px]", "w-[20px]")
+
+	}
+
+	if(scrollPosition >= ($experienceEl.offsetTop - 90) && scrollPosition <= ($portfolioEl.offsetTop - 140)){
+        $experienceLinkText.classList.replace("text-slate-500", "text-white")
+        $experienceLinkDiv.classList.replace("bg-slate-500", "bg-white")
+        $experienceLinkDiv.classList.replace("w-[20px]", "w-[60px]")
+    }else{
+		$experienceLinkText.classList.replace("text-white", "text-slate-500")
+        $experienceLinkDiv.classList.replace("bg-white", "bg-slate-500")
+        $experienceLinkDiv.classList.replace("w-[60px]", "w-[20px]")
+
+	}
+
+	if(scrollPosition >= ($portfolioEl.offsetTop - 90) && scrollPosition <= ($recomendacionesEl.offsetTop - 140)){
+        $portfolioLinkText.classList.replace("text-slate-500", "text-white")
+        $portfolioLinkDiv.classList.replace("bg-slate-500", "bg-white")
+        $portfolioLinkDiv.classList.replace("w-[20px]", "w-[60px]")
+    }else{
+		$portfolioLinkText.classList.replace("text-white", "text-slate-500")
+        $portfolioLinkDiv.classList.replace("bg-white", "bg-slate-500")
+        $portfolioLinkDiv.classList.replace("w-[60px]", "w-[20px]")
+
+	}
+
+}
+
+window.addEventListener('scroll', scrollWindow)
+</script>
+
 
 
 <style>
@@ -101,8 +171,12 @@ import gitSVG from '../public/github.svg'
   filter: blur(30px);
 }
 
-/*#aside-bar{
+/*#aside-bar
 	position: sticky;
 	top: 70px; /* Ajusta el valor según el margen deseado */
+
+.link-active{
+	opacity: 0;
+}
    
 </style>
